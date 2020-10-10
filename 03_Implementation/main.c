@@ -111,7 +111,7 @@ printf("********************************************");
 //gotoxy(10,17);
 printf("Exiting in 3 second...........>");
 //flushall();
-Sleep(3000);
+//Sleep(3000);
 exit(0);
 }
 default:
@@ -271,7 +271,7 @@ while(fread(&a,sizeof(a),1,fp)==1)
 {
 if(a.id==d)
 {
-Sleep(2);
+//Sleep(2);
 //gotoxy(20,7);
 printf("The Book is available");
 //gotoxy(20,8);
@@ -818,17 +818,17 @@ int i=0,j;
 //gotoxy(10,4);
 for(j=0;j<20;j++)
 {
-Sleep(50);
+//Sleep(50);
 printf("*");
 }
 for(j=0;j<20;j++)
 {
-Sleep(50);
+//Sleep(50);
 printf("%c",d[j]);
 }
 for(j=0;j<20;j++)
 {
-Sleep(50);
+//Sleep(50);
 printf("*");
 }
 //gotoxy(10,10);
