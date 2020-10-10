@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include<string.h>
 #include<ctype.h>
+#define RETURNTIME 15
 //#include<dos.h>
 //#include<time.h>
 //#include<bios.h>
