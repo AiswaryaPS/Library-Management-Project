@@ -847,9 +847,8 @@ union REGS in,out;
        in.x.ax = 0x1;
        int86(0x33,&in,&out);
 }*/
-int Password(char password[10]) //for password option
+int Password(char password[10]); //for password option
 {
-
 system("cls");
 //char d[25]="Password Protected";
 char pass[10];
@@ -889,7 +888,7 @@ if(ch!=13 && ch!=8){
 }
 pass[i] = '\0';*/
 printf("Enter Password:");
-scanf("%c",&Password);
+scanf("%s",Password);
 if(strcmp(pass,password)==0)
 {
 
