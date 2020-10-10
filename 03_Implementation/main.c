@@ -28,9 +28,10 @@ float Price;
 int count;
 int rackno;
 char *cat;
+       /*
 struct meroDate issued;
 struct meroDate duedate;
-};
+};*/
 struct books a;
 int main()
 {
