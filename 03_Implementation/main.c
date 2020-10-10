@@ -13,10 +13,6 @@ char password[10]={"pass"};
 //SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 //}
 
-struct meroDate
-{
-int mm,dd,yy;
-};
 struct books
 {
 int id;
@@ -45,8 +41,7 @@ printf("login unsuccessfull");
 main();
 
 }
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 //return 0;
 
@@ -79,8 +74,8 @@ printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2
 // t;
 //gotoxy(20,21);
 printf("Enter your choice:");
-int q;
-scanf("%d",&q);
+char q;
+scanf("%c",&q);
 switch(q)
 {
 case '1':
@@ -122,8 +117,8 @@ default:
 {
 //gotoxy(10,23);
 printf("\aWrong Entry!!Please re-entered correct option");
-int c;
-scanf("%d",&c);
+char c;
+scanf("%c",&c);
 if(c)
 mainmenu();
 }
@@ -169,8 +164,8 @@ fclose(fp);
 printf("The record is sucessfully saved");
 //gotoxy(21,15);
 printf("Save any more?(Y / N):");
-int v;
-scanf("%d",&v);
+char v;
+scanf("%c",&v);
 if(v=='n')
 mainmenu();
 else
@@ -209,8 +204,8 @@ if(findbook!='t')
 {
 //gotoxy(10,10);
 printf("No record is found modify the search");
-int r;
-scanf("%d",&r);
+char r;
+scanf("%c",&r);
 if(r)
 mainmenu();
 }
@@ -218,8 +213,8 @@ if(findbook=='t' )
 {
 //gotoxy(10,9);
 printf("Do you want to delete it?(Y/N):");
-int x;
-scanf("%d",&x);
+char x;
+scanf("%c",&x);
 if(x=='y')
 {
 ft=fopen("test.dat","wb+");  //temporary file for delete
@@ -248,8 +243,8 @@ printf("Delete another record?(Y/N)");
 else
 mainmenu();
 fflush(stdin);
-int w;
-scanf("%d",&w);
+char w;
+scanf("%c",&w);
 another=w;
 }
 }
@@ -335,8 +330,8 @@ printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2
 }
 //gotoxy(20,17);
 printf("Try another search?(Y/N)");
-int m;
-scanf("%d",&m);
+char m;
+scanf("%c",&m);
 if(m=='y')
 searchbooks();
 else
@@ -402,16 +397,15 @@ printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2
 }
 //gotoxy(20,17);
 printf("Try another search?(Y/N)");
-int z;
-scanf("%d",&z);
+char z;
+scanf("%c",&z);
 if(z=='y')
 searchbooks();
 else
 mainmenu();
 break;
 }
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 default :
 searchbooks();
@@ -434,8 +428,8 @@ printf("\xDB\xDB\xDB\xDb\xB2 3. Search Issued Book");
 printf("\xDB\xDB\xDB\xDb\xB2 4. Remove Issued Book");
 //gotoxy(10,14);
 printf("Enter a Choice:");
-int f;
-scanf("%d",&f);
+char f;
+scanf("%c",&f);
 switch(f)
 {
 case '1':  //issue book
@@ -503,8 +497,8 @@ printf("No record found");
 //gotoxy(10,15);
 printf("Issue any more(Y/N):");
 fflush(stdin);
-int b;
-scanf("%d",&b);
+char b;
+scanf("%c",&b);
 another=b;
 fclose(fp);
 }
@@ -565,8 +559,7 @@ if(a.id==p)
 issuerecord();
 //gotoxy(10,12);
 printf("Press any key.......");
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 issuerecord();
 c=1;
@@ -582,8 +575,8 @@ printf("No Record Found");
 }
 //gotoxy(10,13);
 printf("Try Another Search?(Y/N)");
-int g;
-scanf("%d",&g);
+char g;
+scanf("%c",&g);
 another=g;
 }
 }
@@ -643,16 +636,15 @@ printf("No Record Found");
 }
 //gotoxy(10,16);
 printf("Delete any more?(Y/N)");
-int u;
-scanf("%d",&u);
+char u;
+scanf("%c",&u);
 another=u;
 }
 }
 default:
 //gotoxy(10,18);
 printf("\aWrong Entry!!");
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 issuebooks();
 break;
@@ -745,8 +737,8 @@ printf("No record found");
 //gotoxy(15,16);
 printf("Modify another Record?(Y/N)");
 fflush(stdin);
-int h;
-scanf("%d",&h);
+char h;
+scanf("%c",&h);
 another=h ;
 }
 returnfunc();
@@ -756,8 +748,8 @@ void returnfunc(void)
 {
 printf(" Press ENTER to return to main menu");
 }
-int e;
-scanf("%d",&e);
+char e;
+scanf("%c",&e);
 a:
 if(e==13) //allow only use of enter
 mainmenu();
@@ -797,8 +789,7 @@ if(checkid(t) == 0)
 {
 //gotoxy(21,13);
 printf("\aThe book id already exists\a");
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 mainmenu();
 return 0;
@@ -848,17 +839,16 @@ union REGS in,out;
        in.x.ax = 0x1;
        int86(0x33,&in,&out);
 }*/
-int Password(char password[10]) //for password option
+char Password(char password[10]) //for password option
 {
 
 system("cls");
-char d[25]="Password Protected";
-char ch,pass[10];
-int i=0,j;
+//char d[25]="Password Protected";
+char pass[10];
 //textbackground(WHITE);
 //textcolor(RED);
 //gotoxy(10,4);
-for(j=0;j<20;j++)
+/*for(j=0;j<20;j++)
 {
 //Sleep(50);
 printf("*");
@@ -885,11 +875,13 @@ ch=d;
 
 if(ch!=13 && ch!=8){
 //putc('*');
-pass[i] = ch;
-i++;
+//pass[i] = ch;
+//i++;
 }
 }
-pass[i] = '\0';
+pass[i] = '\0';*/
+printf("Enter Password:");
+scanf("%c",&Password);
 if(strcmp(pass,password)==0)
 {
 
@@ -897,19 +889,17 @@ if(strcmp(pass,password)==0)
 //textcolor(BLINK);
 printf("Password match");
 //gotoxy(17,10);
-printf("Press any key to countinue.....");
-int l;
-scanf("%d",&l);
+printf("Press enter to countinue.....");
+scanf("%c",&l);
 //getch();
-//mainmenu();
+mainmenu();
 p=1;
 }
 else
 {
 //gotoxy(15,16);
 printf("\aWarning!! Incorrect Password");
-int l;
-scanf("%d",&l);
+scanf("%c",&l);
 //getch();
 //Password();
 p=0;
@@ -940,6 +930,4 @@ for(loader=1;loader<20;loader++)
 Sleep(100);printf("%c",219);}
 }*/
 //End of program
-
-
 
