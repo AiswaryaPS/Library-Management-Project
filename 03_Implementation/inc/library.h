@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include<string.h>
 #include<ctype.h>
-#include<dos.h>
-#include<time.h>
-#include<bios.h>
+//#include<dos.h>
+//#include<time.h>
+//#include<bios.h>
 #endif
 void returnfunc(void);
 void mainmenu(void);
