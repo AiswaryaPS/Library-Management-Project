@@ -13,10 +13,10 @@ int password[10]={"pass"};
 //coord.X = x; coord.Y = y; // X and Y coordinates
 //SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 //}
-struct meroDate
+/*struct meroDate
 {
 int mm,dd,yy;
-};
+};*/
 struct books
 {
 int id;
@@ -910,6 +910,7 @@ p=0;
 }
 return p;
 }
+/*
 void issuerecord()  //display issued book's information
 {
 system("cls");
@@ -919,7 +920,7 @@ printf("The Book has taken by Mr. %s",a.stname);
 printf("Issued Date:%d-%d-%d",a.issued.dd,a.issued.mm,a.issued.yy);
 //gotoxy(10,10);
 printf("Returning Date:%d-%d-%d",a.duedate.dd,a.duedate.mm,a.duedate.yy);
-}
+}*/
 
 /*void loaderanim()
 {
