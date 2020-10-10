@@ -13,8 +13,10 @@ int password[10]={"pass"};
 //coord.X = x; coord.Y = y; // X and Y coordinates
 //SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 //}
-
-
+struct meroDate
+{
+int mm,dd,yy;
+};
 struct books
 {
 int id;
@@ -841,7 +843,7 @@ union REGS in,out;
        in.x.ax = 0x1;
        int86(0x33,&in,&out);
 }*/
-char Password(char password[10]) //for password option
+int Password(char password[10]) //for password option
 {
 
 system("cls");
