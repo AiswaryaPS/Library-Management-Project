@@ -3,7 +3,8 @@ char catagories[][15]={"Computer","Electronics","Electrical","Civil","Mechanical
 FILE *fp,*ft,*fs;
 //COORD coord = {0, 0};
 //list of global variable
-int s,k,p;
+int s,p;
+char k,l;
 char findbook;
 char password[10]={"pass"};
 
