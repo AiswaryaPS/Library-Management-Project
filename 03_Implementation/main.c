@@ -6,7 +6,7 @@ FILE *fp,*ft,*fs;
 int s,p;
 char k,l;
 char findbook;
-char password[10]={"pass"};
+int password[10]={"pass"};
 
 //void gotoxy (int x, int y)
 //{
