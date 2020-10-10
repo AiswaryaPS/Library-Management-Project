@@ -6,7 +6,7 @@ FILE *fp,*ft,*fs;
 int s,p;
 char k,l;
 char findbook;
-int password[10]={"pass"};
+char password[10];
 
 //void gotoxy (int x, int y)
 //{
@@ -92,9 +92,9 @@ break;
 case '3':
 searchbooks();
 break;
-case '4':
+/*case '4':
 issuebooks();
-break;
+break;*/
 case '5':
 viewbooks();
 break;
@@ -417,6 +417,7 @@ searchbooks();
 }
 fclose(fp);
 }
+       /*
 void issuebooks(void)  //function that issue books from library
 {
 int t;
@@ -656,7 +657,7 @@ break;
 }
 //gotoxy(1,30);
 returnfunc();
-}
+}*/
 void viewbooks(void)  //show the list of book persists in library
 {
 int i=0,j;
@@ -753,10 +754,10 @@ void returnfunc(void)
 {
 printf(" Press ENTER to return to main menu");
 }
-char e;
-scanf("%c",&e);
+char f;
+scanf("%c",&f);
 a:
-if(e==13) //allow only use of enter
+if(f==13) //allow only use of enter
 mainmenu();
 else
 goto a;
@@ -830,6 +831,7 @@ if(a.id==t)
 return 0;  //returns 0 if book exits
 return 1; //return 1 if it not
 }
+       /*
 int t(void) //for time
 {
 time_t t;
@@ -837,6 +839,7 @@ time(&t);
 printf("Date and time:%s\n",ctime(&t));
 
 return 0 ;
+*/
 }
 /*void show_mouse(void) //show inactive mouse pointer in programme
 {
