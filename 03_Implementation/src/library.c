@@ -36,7 +36,7 @@ pass[i] = ch;
 i++;
 }
 }
-pass[i] = '\0';*/
+pass[i] = '\0';
 if(strcmp(pass,password)==0)
 {
 
@@ -56,3 +56,4 @@ printf("\aWarning!! Incorrect Password");
 }
 return p;
 }
+*/
