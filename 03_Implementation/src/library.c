@@ -53,5 +53,5 @@ else
 printf("\aWarning!! Incorrect Password");
 //getch();
 //p=0;
-}
+};
 //return p;
