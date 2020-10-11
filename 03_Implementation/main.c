@@ -4,7 +4,7 @@ FILE *fp,*ft,*fs;
 //COORD coord = {0, 0};
 //list of global variable
 int s,p;
-char k,q,l;
+char k,q,l,h;
 char findbook;
 char password[10];
 
@@ -890,7 +890,7 @@ if(strcmp(pass,password)==0)
 printf("Password match");
 //gotoxy(17,10);
 printf("Press any key to countinue.....");
-getch();
+//getch();
 //mainmenu();
 p=1;
 }
