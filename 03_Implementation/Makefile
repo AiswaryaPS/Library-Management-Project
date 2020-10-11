@@ -42,7 +42,7 @@ clean:
 	rm -rf $(BUILD)
 
 # Create new build folder if not present
-//$(BUILD):
-	//mkdir build
+$(BUILD):
+	mkdir build
 	
 	
