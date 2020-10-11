@@ -45,13 +45,13 @@ printf("Password match");
 //gotoxy(17,10);
 printf("Press any key to countinue.....");
 //getch();
-p=1;
+//p=1;
 }
 else
 {
 //gotoxy(15,16);
 printf("\aWarning!! Incorrect Password");
 //getch();
-p=0;
+//p=0;
 }
 return p;
