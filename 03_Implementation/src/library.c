@@ -26,7 +26,7 @@ printf("*");
 //gotoxy(15,7);
 printf("Enter Password:");
 
-while(ch!=13)
+/*while(ch!=13)
 {
 ch;
 
@@ -36,7 +36,7 @@ pass[i] = ch;
 i++;
 }
 }
-pass[i] = '\0';
+pass[i] = '\0';*/
 if(strcmp(pass,password)==0)
 {
 
