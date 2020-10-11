@@ -13,10 +13,10 @@ char password[10];
 //coord.X = x; coord.Y = y; // X and Y coordinates
 //SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 //}
-/*struct meroDate
+struct meroDate
 {
 int mm,dd,yy;
-};*/
+};
 struct books
 {
 int id;
@@ -28,12 +28,11 @@ float Price;
 int count;
 int rackno;
 char *cat;
-       /*
 struct meroDate issued;
 struct meroDate duedate;
-};*/
+};
 struct books a;
-int main()
+void main()
 {
 k=Password(password);
 if(k==1)
@@ -47,7 +46,6 @@ main();
 
 }
 scanf("%c",&l);
-//getch();
 //return 0;
 
 }
@@ -56,6 +54,7 @@ void mainmenu()
 //loaderanim();
 system("cls");
 //    textbackground(13);
+
 //gotoxy(20,3);
 printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
 //    show_mouse();
@@ -76,10 +75,9 @@ printf("\xDB\xDB\xDB\xDB\xB2 7. Close Application");
 //gotoxy(20,19);
 printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
 //gotoxy(20,20);
-// t;
+
 //gotoxy(20,21);
 printf("Enter your choice:");
-char q;
 scanf("%c",&q);
 switch(q)
 {
@@ -92,9 +90,9 @@ break;
 case '3':
 searchbooks();
 break;
-/*case '4':
+case '4':
 issuebooks();
-break;*/
+break;
 case '5':
 viewbooks();
 break;
@@ -109,6 +107,14 @@ printf("\tLibrary Management System");
 //gotoxy(16,4);
 printf("\tMini Project in C");
 //gotoxy(16,5);
+//printf("\tis brought to you by");
+//gotoxy(16,7);
+//printf("\tCode with C Team");
+//gotoxy(16,8);
+printf("******************************************");
+//gotoxy(16,10);
+printf("*******************************************");
+//gotoxy(16,11);
 printf("*******************************************");
 //gotoxy(16,13);
 printf("********************************************");
@@ -122,9 +128,7 @@ default:
 {
 //gotoxy(10,23);
 printf("\aWrong Entry!!Please re-entered correct option");
-char c;
-scanf("%c",&c);
-if(c)
+if(q)
 mainmenu();
 }
 
@@ -169,9 +173,8 @@ fclose(fp);
 printf("The record is sucessfully saved");
 //gotoxy(21,15);
 printf("Save any more?(Y / N):");
-char v;
-scanf("%c",&v);
-if(v=='n')
+scanf("%c",&h);
+if(h=='n')
 mainmenu();
 else
 system("cls");
@@ -209,18 +212,18 @@ if(findbook!='t')
 {
 //gotoxy(10,10);
 printf("No record is found modify the search");
-char r;
-scanf("%c",&r);
-if(r)
+char j;
+scanf("%c",&j);
+if(j)
 mainmenu();
 }
 if(findbook=='t' )
 {
 //gotoxy(10,9);
 printf("Do you want to delete it?(Y/N):");
-char x;
-scanf("%c",&x);
-if(x=='y')
+char m;
+scanf("%c",&m);
+if(m=='y')
 {
 ft=fopen("test.dat","wb+");  //temporary file for delete
 rewind(fp);
@@ -248,9 +251,7 @@ printf("Delete another record?(Y/N)");
 else
 mainmenu();
 fflush(stdin);
-char w;
-scanf("%c",&w);
-another=w;
+//another;
 }
 }
 //gotoxy(10,15);
@@ -269,9 +270,8 @@ printf("\xDB\xDB\xDB\xB2 2. Search By Name");
 printf("Enter Your Choice");
 fp=fopen("Bibek.dat","rb+"); //open file for reading propose
 rewind(fp);   //move pointer at the begining of file
-int o;
-scanf("%d",&o);
-switch(o)
+
+switch(q)
 {
 case '1':
 {
@@ -308,7 +308,7 @@ printf("\xB2");
 printf("\xB2 Qantity:%d ",a.quantity);
 //gotoxy(47,12);
 printf("\xB2");
-//gotoxy(47,11);
+// gotoxy(47,11);
 printf("\xB2");
 //gotoxy(20,13);
 printf("\xB2 Price:Rs.%.2f",a.Price);
@@ -335,9 +335,7 @@ printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2
 }
 //gotoxy(20,17);
 printf("Try another search?(Y/N)");
-char m;
-scanf("%c",&m);
-if(m=='y')
+if('y')
 searchbooks();
 else
 mainmenu();
@@ -395,29 +393,29 @@ if(d==0)
 {
 //gotoxy(20,8);
 printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-//gotoxy(20,9);printf("\xB2");  gotoxy(38,9);printf("\xB2");
+//gotoxy(20,9);
+printf("\xB2");
+//  gotoxy(38,9);
+printf("\xB2");
 //gotoxy(20,10);
 printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-//gotoxy(22,9);printf("\aNo Record Found");
+//gotoxy(22,9);
+printf("\aNo Record Found");
 }
 //gotoxy(20,17);
 printf("Try another search?(Y/N)");
-char z;
-scanf("%c",&z);
-if(z=='y')
+if('y')
 searchbooks();
 else
 mainmenu();
 break;
 }
-scanf("%c",&l);
-//getch();
 default :
+//getch();
 searchbooks();
 }
 fclose(fp);
 }
-       /*
 void issuebooks(void)  //function that issue books from library
 {
 int t;
@@ -434,9 +432,7 @@ printf("\xDB\xDB\xDB\xDb\xB2 3. Search Issued Book");
 printf("\xDB\xDB\xDB\xDb\xB2 4. Remove Issued Book");
 //gotoxy(10,14);
 printf("Enter a Choice:");
-char f;
-scanf("%c",&f);
-switch(f)
+switch(q)
 {
 case '1':  //issue book
 {
@@ -503,9 +499,7 @@ printf("No record found");
 //gotoxy(10,15);
 printf("Issue any more(Y/N):");
 fflush(stdin);
-char b;
-scanf("%c",&b);
-another=b;
+//another;
 fclose(fp);
 }
 
@@ -560,16 +554,15 @@ scanf("%d",&p);
 fs=fopen("Issue.dat","rb");
 while(fread(&a,sizeof(a),1,fs)==1)
 {
-if(a.id==p)
+/*if(a.id==p)
 {
 issuerecord();
 //gotoxy(10,12);
 printf("Press any key.......");
-scanf("%c",&l);
 //getch();
 issuerecord();
 c=1;
-}
+}*/
 
 }
 fflush(stdin);
@@ -581,9 +574,7 @@ printf("No Record Found");
 }
 //gotoxy(10,13);
 printf("Try Another Search?(Y/N)");
-char g;
-scanf("%c",&g);
-another=g;
+//another;
 }
 }
 break;
@@ -603,16 +594,14 @@ while(fread(&a,sizeof(a),1,fs)==1)
 {
 if(a.id==b)
 {
-issuerecord();
+//issuerecord();
 findbook='t';
 }
 if(findbook=='t')
 {
 //gotoxy(10,12);
 printf("Do You Want to Remove it?(Y/N)");
-int f;
-scanf("%d",&f);
-if(f=='y')
+if('y')
 {
 fg=fopen("record.dat","wb+");
 rewind(fs);
@@ -642,22 +631,19 @@ printf("No Record Found");
 }
 //gotoxy(10,16);
 printf("Delete any more?(Y/N)");
-char u;
-scanf("%c",&u);
-another=u;
+//another;
 }
 }
 default:
 //gotoxy(10,18);
 printf("\aWrong Entry!!");
-scanf("%c",&l);
 //getch();
 issuebooks();
 break;
 }
 //gotoxy(1,30);
 returnfunc();
-}*/
+}
 void viewbooks(void)  //show the list of book persists in library
 {
 int i=0,j;
@@ -743,9 +729,7 @@ printf("No record found");
 //gotoxy(15,16);
 printf("Modify another Record?(Y/N)");
 fflush(stdin);
-char h;
-scanf("%c",&h);
-another=h ;
+//another;
 }
 returnfunc();
 }
@@ -754,10 +738,8 @@ void returnfunc(void)
 {
 printf(" Press ENTER to return to main menu");
 }
-char f;
-scanf("%c",&f);
 a:
-if(f==13) //allow only use of enter
+if(13) //allow only use of enter
 mainmenu();
 else
 goto a;
@@ -765,28 +747,44 @@ goto a;
 int getdata()
 {
 int t;
-//gotoxy(20,3);printf("Enter the Information Below");
-//gotoxy(20,4);printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+//gotoxy(20,3);
+printf("Enter the Information Below");
+//gotoxy(20,4);
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
 //gotoxy(20,5);
-//printf("\xB2");gotoxy(46,5);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,5);
+printf("\xB2");
 //gotoxy(20,6);
-//printf("\xB2");gotoxy(46,6);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,6);
+printf("\xB2");
 //gotoxy(20,7);
-//printf("\xB2");gotoxy(46,7);printf("\xB2");
+printf("\xB2");//
+//gotoxy(46,7);
+printf("\xB2");
 //gotoxy(20,8);
-//printf("\xB2");gotoxy(46,8);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,8);
+printf("\xB2");
 //gotoxy(20,9);
-//printf("\xB2");gotoxy(46,9);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,9);
+printf("\xB2");
 //gotoxy(20,10);
-//printf("\xB2");gotoxy(46,10);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,10);
+printf("\xB2");
 //gotoxy(20,11);
-//printf("\xB2");gotoxy(46,11);printf("\xB2");
+printf("\xB2");
+//gotoxy(46,11);
+printf("\xB2");
 //gotoxy(20,12);
-//printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
 //gotoxy(21,5);
-//printf("Category:");
+printf("Category:");
 //gotoxy(31,5);
-//printf("%s",catagories[s-1]);
+printf("%s",catagories[s-1]);
 //gotoxy(21,6);
 printf("Book ID:\t");
 //gotoxy(30,6);
@@ -795,7 +793,6 @@ if(checkid(t) == 0)
 {
 //gotoxy(21,13);
 printf("\aThe book id already exists\a");
-scanf("%c",&l);
 //getch();
 mainmenu();
 return 0;
@@ -831,31 +828,31 @@ if(a.id==t)
 return 0;  //returns 0 if book exits
 return 1; //return 1 if it not
 }
-       /*
-int t(void) //for time
+/*int t(void) //for time
 {
 time_t t;
 time(&t);
 printf("Date and time:%s\n",ctime(&t));
 
 return 0 ;
-*/
 }
-/*void show_mouse(void) //show inactive mouse pointer in programme
+void show_mouse(void) //show inactive mouse pointer in programme
 {
 union REGS in,out;
        in.x.ax = 0x1;
        int86(0x33,&in,&out);
 }*/
-int Password(char password[10]); //for password option
+int Password(char password[10]) //for password option
 {
+
 system("cls");
-//char d[25]="Password Protected";
-char pass[10];
+char d[25]="Password Protected";
+char ch,pass[10];
+int i=0,j;
 //textbackground(WHITE);
 //textcolor(RED);
 //gotoxy(10,4);
-/*for(j=0;j<20;j++)
+for(j=0;j<20;j++)
 {
 //Sleep(50);
 printf("*");
@@ -876,19 +873,15 @@ printf("Enter Password:");
 
 while(ch!=13)
 {
- int d;
- scanf("%d",&d);
-ch=d;
+ch;
 
 if(ch!=13 && ch!=8){
-//putc('*');
-//pass[i] = ch;
-//i++;
+//putch('*');
+pass[i] = ch;
+i++;
 }
 }
-pass[i] = '\0';*/
-printf("Enter Password:");
-scanf("%s",Password);
+pass[i] = '\0';
 if(strcmp(pass,password)==0)
 {
 
@@ -896,25 +889,22 @@ if(strcmp(pass,password)==0)
 //textcolor(BLINK);
 printf("Password match");
 //gotoxy(17,10);
-printf("Press enter to countinue.....");
-scanf("%c",&l);
-//getch();
-mainmenu();
+printf("Press any key to countinue.....");
+getch();
+//mainmenu();
 p=1;
 }
 else
 {
-//gotoxy(15,16);
+//gotoxy(15,16)
 printf("\aWarning!! Incorrect Password");
-scanf("%c",&l);
 //getch();
-//Password();
+//Password()
 p=0;
 }
 return p;
 }
-/*
-void issuerecord()  //display issued book's information
+/*void issuerecord()  //display issued book's information
 {
 system("cls");
 //gotoxy(10,8);
