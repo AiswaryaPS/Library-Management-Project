@@ -7,11 +7,11 @@ char d[25]="Password Protected";
 char ch,pass[10];
 int i=0,j,p;
 //gotoxy(10,4);
-for(j=0;j<20;j++)
-{
+//for(j=0;j<20;j++)
+//{
 //Sleep(50);
-printf("*");
-}
+//printf("*");
+//}
 for(j=0;j<20;j++)
 {
 //Sleep(50);
