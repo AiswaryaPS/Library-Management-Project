@@ -5,7 +5,7 @@ int Password(char password[10])
 system("cls");
 char d[25]="Password Protected";
 char ch,pass[10];
-int i=0,j;
+int i=0,j,p;
 //gotoxy(10,4);
 for(j=0;j<20;j++)
 {
