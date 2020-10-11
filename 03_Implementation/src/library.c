@@ -17,11 +17,11 @@ for(j=0;j<20;j++)
 //Sleep(50);
 printf("%c",d[j]);
 }
-for(j=0;j<20;j++)
+/*for(j=0;j<20;j++)
 {
 //Sleep(50);
 printf("*");
-}
+}*/
 //gotoxy(10,10);
 //gotoxy(15,7);
 printf("Enter Password:");
@@ -54,4 +54,4 @@ printf("\aWarning!! Incorrect Password");
 //getch();
 //p=0;
 }
-return p;
+//return p;
