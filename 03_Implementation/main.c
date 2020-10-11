@@ -4,7 +4,7 @@ FILE *fp,*ft,*fs;
 //COORD coord = {0, 0};
 //list of global variable
 int s,p;
-char k,l;
+char k,q,l;
 char findbook;
 char password[10];
 
