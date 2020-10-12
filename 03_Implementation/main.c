@@ -156,7 +156,7 @@ void addBookInDataBase()
     if(fp == NULL)
     {
         printf("File is not opened\n");
-        exit(1);
+       // exit(1);
     }
     headMessage("ADD NEW BOOKS");
     printf("\n\n\t\t\tENTER YOUR DETAILS BELOW:");
@@ -228,7 +228,7 @@ void searchBooks()
     if(fp == NULL)
     {
         printf("\n\t\t\tFile is not opened\n");
-        exit(1);
+        //exit(1);
     }
     headMessage("SEARCH BOOKS");
     //put the control on books detail
@@ -236,7 +236,7 @@ void searchBooks()
     {
         fclose(fp);
         printf("\n\t\t\tFacing issue while reading file\n");
-        exit(1);
+        //exit(1);
     }
     printf("\n\n\t\t\tEnter Book Name to search:");
     fflush(stdin);
@@ -279,13 +279,13 @@ void viewBooks()
     if(fp == NULL)
     {
         printf("File is not opened\n");
-        exit(1);
+        //exit(1);
     }
     if (fseek(fp,FILE_HEADER_SIZE,SEEK_SET) != 0)
     {
         fclose(fp);
         printf("Facing issue while reading file\n");
-        exit(1);
+        //exit(1);
     }
     while (fread (&addBookInfoInDataBase, sizeof(addBookInfoInDataBase), 1, fp))
     {
