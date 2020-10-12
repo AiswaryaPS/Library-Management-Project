@@ -1,59 +1,51 @@
 #include<library.h>
-int Password(char password[10])
+int isNameValid(const char *name)
 {
-
-system("cls");
-char d[25]="Password Protected";
-char ch,pass[10];
-int i=0,j,p;
-//gotoxy(10,4);
-//for(j=0;j<20;j++)
-//{
-//Sleep(50);
-//printf("*");
-//}
-for(j=0;j<20;j++)
+    int validName = 1;
+    int len = 0;
+    int index = 0;
+    len = strlen(name);
+    for(index =0; index <len ; ++index)
+    {
+        if(!(isalpha(name[index])) && (name[index] != '\n') && (name[index] != ' '))
+        {
+            validName = 0;
+            break;
+        }
+    }
+    return validName;
+}
+// Function to check leap year.
+//Function returns 1 if leap year
+int  IsLeapYear(int year)
 {
-//Sleep(50);
-printf("%c",d[j]);
+    return (((year % 4 == 0) &&
+             (year % 100 != 0)) ||
+            (year % 400 == 0));
 }
-/*for(j=0;j<20;j++)
+// returns 1 if given date is valid.
+int isValidDate(Date *validDate)
 {
-//Sleep(50);
-printf("*");
-}*/
-//gotoxy(10,10);
-//gotoxy(15,7);
-printf("Enter Password:");
-
-/*while(ch!=13)
-{
-ch;
-
-if(ch!=13 && ch!=8){
-//putch('*');
-pass[i] = ch;
-i++;
+    //check range of year,month and day
+    if (validDate->yyyy > MAX_YR ||
+            validDate->yyyy < MIN_YR)
+        return 0;
+    if (validDate->mm < 1 || validDate->mm > 12)
+        return 0;
+    if (validDate->dd < 1 || validDate->dd > 31)
+        return 0;
+    //Handle feb days in leap year
+    if (validDate->mm == 2)
+    {
+        if (IsLeapYear(validDate->yyyy))
+            return (validDate->dd <= 29);
+        else
+            return (validDate->dd <= 28);
+    }
+    //handle months which has only 30 days
+    if (validDate->mm == 4 || validDate->mm == 6 ||
+            validDate->mm == 9 || validDate->mm == 11)
+        return (validDate->dd <= 30);
+    return 1;
 }
-}
-pass[i] = '\0';
-if(strcmp(pass,password)==0)
-{
-
-//gotoxy(15,9);
-printf("Password match");
-//gotoxy(17,10);
-printf("Press any key to countinue.....");
-//getch();
-//p=1;
-}
-else
-{
-//gotoxy(15,16);
-printf("\aWarning!! Incorrect Password");
-//getch();
-//p=0;
-}
-return p;
-}
-*/
+// Add books in list
